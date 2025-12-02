@@ -195,24 +195,24 @@ export default function FarmMap({
       map.current.removeSource(forestSourceId);
     }
 
-    if (showForestChange) {
-      map.current.addSource(forestSourceId, {
-        type: 'raster',
-        tiles: [
-          'https://tiles.globalforestwatch.org/umd_tree_cover_loss/v1.10/tcd_30/{z}/{x}/{y}.png',
-        ],
-        tileSize: 256,
-      });
-
-      map.current.addLayer({
-        id: forestLayerId,
-        type: 'raster',
-        source: forestSourceId,
-        paint: {
-          'raster-opacity': 0.7,
-        },
-      });
-    }
+//  if (showForestChange) {
+//   map.current.addSource(forestSourceId, {
+//     type: 'raster',
+//      tiles: [
+//         'https://tiles.globalforestwatch.org/umd_tree_cover_loss/v1.10/tcd_30/{z}/{x}/{y}.png',
+//      ],
+//      tileSize: 256,
+//    });
+//
+//      map.current.addLayer({
+//        id: forestLayerId,
+//        type: 'raster',
+//        source: forestSourceId,
+//        paint: {
+//          'raster-opacity': 0.7,
+//        },
+//      });
+//    }
   }, [showForestChange, mapLoaded]);
 
   return (
